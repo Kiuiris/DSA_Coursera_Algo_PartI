@@ -1,0 +1,27 @@
+Submission 1:
+- Compilation warning: deprecation -> fixed
+- PMD: 7 private variable can be made final, 2 UncommentedEmptyMethodBody -> fixed
+- Checkstyle: 1 unused import statement, 2 missing whitespace, define 1.96 (fixed), commandline argument (skip)
+- Correctness: 1/38
+    - index out of bound bc of isFull -> wrong size for WQUF full -> fixed
+    - throw wrong exception -> fixed
+    - isFull not working probably -> fixed (wrongly call connected instead of union)
+
+Submission 2:
+- Correctness: 4/38
+    - constructor didn't throw exception -> fixed
+    - wrong corner case -> fixed
+    - empty body of PercolationStats main -> done
+
+Submission 3:
+- Checkstyle: variable T has to be lowercase -> fixed
+- Correctness: 22/38
+    - num of calls to methods exceeds limit -> fixed by adding site opening condition in PercolationStats
+
+Submission 4:
+- Checkstyle: variable T has to be lowercase (dont know why) -> wrong file...
+- Correctness: 22/38
+    - num of calls to methods exceeds limit -> adding more conditions in open()
+
+Submission 5: submit wrong file...
+Submission 6: Pass (99/100 - no need to call isFull() in PercolationStats)

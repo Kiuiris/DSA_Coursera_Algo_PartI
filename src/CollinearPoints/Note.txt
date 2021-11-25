@@ -1,0 +1,27 @@
+Problems:
+[Point]
+- return 0 instead of -Infinity when degenerate
+    -> subY = 0 so the method instantly return 0
+    -> assign -1 to subY
+- return -Infinity instead of Infinity when vertical and subY is -
+    -> assign 1 to subY
+[BruteCollinearPoints]
+- if there are 5 points align, print the same segment 5 times.
+    -> reduce to 4 times (temporarily ignore this cuz there wont be any 5 collinear points.)
+- wrong answer with input8.txt
+    -> wrong use of continue/break in the third for loop
+    -> fixed
+
+[FastCollinearPoints]
+- print wrong answer
+    -> fixed by getting pExcluded[end - 1] instead of pExcluded[end]
+- both arguments to LineSegment constructor are the same point: (3000, 7000) -> fixed by sorting 'sorted' again in the loop
+- if there are 5 points align, print every time. (can't use ArrayList.contains() cuz there is no equals method in LineSegment)
+    -> adding condition to add a new segment
+
+Submission 1: 87/100
+remaining problems:
+    - throw exception when there are duplicate points
+    - throws an exception if either constructor argument is null or any entry in array is null
+    - throw NullPointerException instead of IllegalArgumentException in Point???
+    - data type mutated the points[] array - data type should have no side effects unless documented in API
